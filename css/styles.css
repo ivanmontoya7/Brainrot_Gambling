@@ -1,3 +1,24 @@
-table, th, td {
-    border:1px solid black;
-  }
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+#recompensa {
+  position: absolute;
+  top: 10px;
+  left: 400px;
+}
+
+#dark_mode{
+  position: relative;
+  left: 65px;
+}
+
+body {
+  background-color: #cc0000;
+}
+
+#probabilidades {
+  color: white;
+}
