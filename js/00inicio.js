@@ -1,22 +1,36 @@
-const boton = document.getElementById("gamblear");
-boton.addEventListener("click", iniciar);
 let rows = 3;
-let cols = 3;
-let victorias=0;
+let cols = 5;
+let partidas=0;
+let score=0;
+let ia_black=document.getElementById("ia_black");
+
+let boton = document.getElementById("gamblear");
+
+
 let dark_mode_button=document.getElementById("dark_mode");
 
+dibujar_tablero();
+boton.addEventListener("click", iniciar);
+dark_mode_button.addEventListener("click", dark_mode);
+
 function iniciar() {
-    new juego(rows,cols);
-    victorias=victorias+1;
-    console.log(victorias);
-    if (victorias>=10){
+    new juego(rows,cols,score);
+    
+    partidas=partidas+1;
+    if (partidas>=10){
         dark_mode_button.hidden=false;
     }
 }
 
-function dark_mode(){
-    dark_mode_button.onclick(document.getElementById("ia_black").hidden=false);
+function dibujar_tablero(){
+    let clase_tablero = new tablero(cols, rows);
+    clase_tablero.dibujar_tablero();
 }
 
-const clase_tablero = new tablero(rows, cols);
-clase_tablero.dibujar_tablero();
+function dark_mode(){
+    ia_black.hidden=false;
+    let audio = new Audio("audio/Full scream sound FNaf.mp3");
+    audio.addEventListener("ended", dark_mode);
+    audio.play();
+}
+
