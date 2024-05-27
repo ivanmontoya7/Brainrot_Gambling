@@ -103,24 +103,24 @@ class juego {
 
     es_premio() {
         //TODO: hacer combinaciones con la matriz al declarar las casillas, o crear matrices con combinaciones ganadoras
-        const casillas = [
-            [this.casilla1.src, this.casilla2.src, this.casilla3.src],
-            [this.casilla4.src, this.casilla5.src, this.casilla6.src],
-            [this.casilla7.src, this.casilla8.src, this.casilla9.src],
-            [this.casilla1.src, this.casilla4.src, this.casilla7.src],
-            [this.casilla2.src, this.casilla5.src, this.casilla8.src],
-            [this.casilla3.src, this.casilla6.src, this.casilla9.src],
-            [this.casilla1.src, this.casilla5.src, this.casilla9.src]
-        ];
-
-        for (const casilla of casillas) {
-            if (casilla[0] === casilla[1] && casilla[1] === casilla[2]) {
-                console.log(casilla);
-            return casilla[0], casilla[1], casilla[2];
-            }
+        switch (true) {
+            case (this.casilla1.src === this.casilla2.src && this.casilla2.src === this.casilla3.src):
+                return [this.casilla1, this.casilla2, this.casilla3];
+            case (this.casilla4.src === this.casilla5.src && this.casilla5.src === this.casilla6.src):
+                return [this.casilla4, this.casilla5, this.casilla6];
+            case (this.casilla7.src === this.casilla8.src && this.casilla8.src === this.casilla9.src):
+                return [this.casilla7, this.casilla8, this.casilla9];
+            case (this.casilla1.src == this.casilla4.src && this.casilla4.src == this.casilla7.src):
+                return [this.casilla1, this.casilla4, this.casilla7];
+            case (this.casilla2.src == this.casilla5.src && this.casilla5.src == this.casilla8.src):
+                return [this.casilla2, this.casilla5, this.casilla8];
+            case (this.casilla3.src == this.casilla6.src && this.casilla6.src == this.casilla9.src):
+                return [this.casilla3, this.casilla6, this.casilla9];
+            case (this.casilla1.src == this.casilla5.src && this.casilla5.src == this.casilla9.src):
+                return [this.casilla1, this.casilla5, this.casilla9];
+            default:
+                return 0;
         }
-
-        return 0;
 
     }
 
