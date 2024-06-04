@@ -20,6 +20,10 @@ body {
   
 }
 
+img{
+  width: 125px;
+}
+
 #gamblear{
   margin-right: 50%;
   margin-left: 50%;
@@ -46,10 +50,11 @@ body {
   border: none;
 }
 
-#gazillion {
+#gazillion,#probabilidades{
   color: white;
   position: relative;
-  border: none;
+  margin-left: 3%;
+  margin-top: 10px;
 }
 
 .zoom {
