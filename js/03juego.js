@@ -81,7 +81,7 @@ class juego {
         this.eleccion_video = Math.floor(Math.random() * 4);
         this.ruta_video = this.es_premio()[0].src;
 
-        this.video.src = "./vids/" + this.ruta_video[this.ruta_video.length-5] + "/" + this.eleccion_video + ".mp4";
+        this.video.src = "./vids/" + this.ruta_video[this.ruta_video.length - 5] + "/" + this.eleccion_video + ".mp4";
 
         /*         let error = false;
                 while (error) {
@@ -101,7 +101,7 @@ class juego {
 
     es_premio() {
         //TODO: hacer combinaciones con la matriz al declarar las casillas, o crear matrices con combinaciones ganadoras
-        
+
         this.combinaciones = [
             [this.casilla1, this.casilla2, this.casilla3],
             [this.casilla4, this.casilla5, this.casilla6],
@@ -115,7 +115,7 @@ class juego {
 
         for (let combinacion of this.combinaciones) {
             if (combinacion[0].src === combinacion[1].src && combinacion[1].src === combinacion[2].src) {
-            return [combinacion[0], combinacion[1], combinacion[2]];
+                return [combinacion[0], combinacion[1], combinacion[2]];
             }
         }
 

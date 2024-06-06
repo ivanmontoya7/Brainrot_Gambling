@@ -6,7 +6,7 @@ class tablero {
         this.cols = cols;
         this.tabla = document.getElementById("tabla");
         this.t = document.getElementById("tbodyt");
-        
+
     }
 
 
