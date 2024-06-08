@@ -1,5 +1,4 @@
-# vsc_extension_gambling
-Extensión para gamblear durante tus horas de código (never stop the grind)
+# Brainrot Gambling
 
 If you feel stressed, edge aggressively,
 If you feel lonely, just tip your landlord,
