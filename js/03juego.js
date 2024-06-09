@@ -36,6 +36,11 @@ class juego {
     }
 
     pintar_casillas() {
+        for (let i = 0; i < this.rows; i++) {
+            for (let j = 0; j < this.cols; j++) {
+                this['casilla' + (i * this.cols + j + 1)].classList.remove("zoom");
+            }
+        }
         this.video.pause();
         this.ocultar_contenido(this.video);
 
